@@ -164,7 +164,7 @@ module.exports={
         if(qid!=undefined){
             var sqlupd = 'update question set looknum=looknum+1 where qid = ?';
             var sqldetail = "select qid,nickname,title,content,uid,looknum,renum,finished,updtime,date_format(createtime,'%Y-%c-%d') as createtime from question where qid=?";
-            var sqlReply="select rpid,content,uid,nickname,date_format(createtime,'%Y-%c-%d') as createtime from replies where qid=?";
+            var sqlReply="select rpid,content,uid,nickname,date_format(createtime,'%Y-%c-%d') as createtime from Replies where qid=?";
             var updParam = [qid];
 
         }else{
