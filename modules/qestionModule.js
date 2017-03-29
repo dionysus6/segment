@@ -28,7 +28,7 @@ module.exports={
         pool = connPool();
         //从pool中获取连接(异步,取到后回调)
         pool.getConnection(function(err,conn){
-            var sql1 = 'insert into replies (qid,content,uid,nickname) value(?,?,?,?)';
+            var sql1 = 'insert into Replies (qid,content,uid,nickname) value(?,?,?,?)';
             var sql2 = 'update question set renum=renum+1 where qid = ?'
             var param1 = [req.body['qid'],req.body['content'],loginbean.id,loginbean.nickname];
             var param2 = [req.body['qid']];

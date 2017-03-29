@@ -2,7 +2,7 @@ var mysql = require("mysql");
 module.exports = (function(){
     var pool = mysql.createPool({
         host:"localhost",
-        user:"root",
+        user:"root1",
         password:"6",
         database:"segment",
         port:"3306"
